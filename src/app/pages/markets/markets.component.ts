@@ -8,16 +8,19 @@ import { MatPaginator } from '@angular/material/paginator';
 @Component({
   selector: 'app-markets',
   templateUrl: './markets.component.html',
-  styleUrls: ['./markets.component.scss']
+  styleUrls: ['./markets.component.scss'],
 })
 export class MarketsComponent {
   displayedColumns: string[] = ['name', 'symbol', 'id', 'button'];
   dataSource = new MatTableDataSource();
 
-  constructor(private cryptoService: CryptoService, private _liveAnnouncer: LiveAnnouncer) {}
+  constructor(
+    private cryptoService: CryptoService,
+    private _liveAnnouncer: LiveAnnouncer
+  ) {}
 
   @ViewChild(MatSort)
-  sort: MatSort = new MatSort;
+  sort: MatSort = new MatSort();
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
 
@@ -36,5 +39,4 @@ export class MarketsComponent {
       this._liveAnnouncer.announce('Sorting cleared');
     }
   }
-
 }

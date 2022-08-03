@@ -1,33 +1,33 @@
-<div class="row">
-  <div class="col-7">
-    <dl>
-      <dt>Name</dt>
-      <dd>{{ coin.name }}</dd>
-    </dl>
-    <dl>
-      <dt>Symbol</dt>
-      <dd>{{ coin.symbol | uppercase }}</dd>
-    </dl>
-    <dl>
-      <dt>Date</dt>
-      <dd>{{ coin.genesis_date }}</dd>
-    </dl>
-
-    <dl>
-      <dt>Categories</dt>
-      <dd>{{ coin.categories }}</dd>
-    </dl>
-
-    <dl>
-      <dt>ID</dt>
-      <dd>{{ coin.id }}</dd>
-    </dl>
-    <dl>
-      <dt>Description</dt>
-      <dd>{{ coin.desc }}</dd>
-    </dl>
+<div class="d-flex justify-content-center align-items-center">
+  <div class="col text-end pe-4">
+    <img src="{{ coin.image.large }}" class="coin-img" />
   </div>
-  <div class="col-5">
-    <img src="{{ coin.image.large }}" class="card-img-top" />
+  <div class="col flex-end">
+    <h1 class="coin-name">{{ coin.name }}</h1>
+    <p class="symbol">{{ coin.symbol | uppercase }}</p>
+  </div>
+</div>
+
+<div class="text-center pt-5">
+  <div class="col">
+    <h2>Description</h2>
+    <p>{{ coin.desc || "no description" }}</p>
+  </div>
+  <div class="col">
+    <h2>Genesis Date</h2>
+    <p>{{ coin.genesis_date || "no information" }}</p>
+  </div>
+  <div class="col">
+    <h2>Categories</h2>
+    <p>{{ coin.categories }}</p>
+  </div>
+  <div class="col">
+    <h2>ID</h2>
+    <p>{{ coin.id }}</p>
+  </div>
+
+  <div class="col">
+    <h2>Homepage</h2>
+    <a href="{{ coin.links.homepage[0] }}">{{ coin.links.homepage[0] }}</a>
   </div>
 </div>

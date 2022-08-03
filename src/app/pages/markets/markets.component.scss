@@ -1,4 +1,30 @@
+
 table {
-  border-radius: 5px;
   width: 100%;
+}
+
+.table-container {
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  color:black;
+}
+
+.button-row {
+  padding: 0.5rem;
+}
+
+button {
+  background-color: rgba(92, 34, 146, 0.904);
+  border: none;
+  border-radius: 0.2rem;
+}
+
+button p {
+  margin: 0;
+  padding: 0.5rem;
+  color: white;
 }

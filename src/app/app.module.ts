@@ -19,6 +19,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './pages/home/home.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

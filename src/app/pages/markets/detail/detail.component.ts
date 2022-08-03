@@ -6,13 +6,12 @@ import { CryptoService } from '../../../services/crypto.service';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
-  styles: [],
+  styleUrls: ['./detail.component.scss'],
 })
 export class DetailComponent implements OnInit {
+  private id: string = '';
 
-  private id: string = "";
-
-  public coin: CoinDetail = new CoinDetail;
+  public coin: CoinDetail = new CoinDetail();
 
   constructor(
     private route: ActivatedRoute,
@@ -26,7 +25,10 @@ export class DetailComponent implements OnInit {
 
     this.cryptoService.getCoinById(this.id).subscribe((res: any) => {
       this.coin = res;
+      console.log((this.coin = res));
+      if ((res = null)) {
+        return;
+      }
     });
   }
-
 }
